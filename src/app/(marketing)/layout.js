@@ -4,12 +4,22 @@ export default function Layout({ children }) {
     return (
         <div>
             <header>
-                <Link href="/">Home</Link>
-                <Link href="/product">Product</Link>
-                <Link href="/about">About</Link>
-                <Link href="/contact">Contact</Link>
+                <div className="container site-header">
+                    <div className="brand">
+                        <Link href="/">MyPortfolio</Link>
+                    </div>
+                    <nav>
+                        <Link className="nav-link" href="/">Home</Link>
+                        <Link className="nav-link" href="/product">Product</Link>
+                        <Link className="nav-link" href="/about">About</Link>
+                        <Link className="nav-link" href="/contact">Contact</Link>
+                    </nav>
+                </div>
             </header>
-            {children}
+            <main className="container">{children}</main>
+            <footer>
+                <div className="container">© {new Date().getFullYear()} MyPortfolio</div>
+            </footer>
         </div>
     );
 }
