@@ -1,13 +1,18 @@
 import Link from "next/link";
+import projects from "../../../data/projects";
 
-export default function ProductListPage() {
+export default function ProjectsPage() {
     return (
         <div>
-            <h1>Product List</h1>
+            <h1>Projects</h1>
+            <p>Some projects I've built — click to view details.</p>
             <div className="product-grid">
-                <Link className="card" href="/product/1">Product 1</Link>
-                <Link className="card" href="/product/2">Product 2</Link>
-                <Link className="card" href="/product/3">Product 3</Link>
+                {projects.map((p) => (
+                    <Link key={p.id} className="card" href={p.href} target="_blank">
+                        <strong>{p.title}</strong>
+                        <div style={{ marginTop: 8 }}>{p.description}</div>
+                    </Link>
+                ))}
             </div>
         </div>
     );
