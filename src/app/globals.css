@@ -329,7 +329,7 @@ nav {
 main {
   flex: 1;
   width: 100%;
-  padding: 56px 0 88px;
+  padding: 56px 0 120px;
 }
 
 main .page-head {
@@ -349,7 +349,7 @@ main .page-head p {
   grid-template-columns: 1fr;
   gap: 40px;
   align-items: center;
-  padding: 32px 0 16px;
+  padding: 32px 0 64px;
 }
 
 .hero-title {
@@ -571,6 +571,7 @@ main .page-head p {
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
   margin-top: 28px;
+  margin-bottom: 48px;
 }
 
 /* ——— Repo-style project card ——— */
@@ -906,6 +907,7 @@ a.repo-card:hover .arrow {
 
 .contact-card {
   margin-top: 24px;
+  margin-bottom: 48px;
   max-width: 620px;
   background: var(--bg-code);
   border: 1px solid var(--border);
@@ -997,7 +999,7 @@ footer {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: 32px;
-  padding: 48px 0 36px;
+  padding: 64px 0 36px;
 }
 
 .footer-col {
@@ -1165,11 +1167,11 @@ footer {
   }
 
   main {
-    padding: 40px 0 72px;
+    padding: 40px 0 96px;
   }
 
   .hero {
-    padding: 16px 0 8px;
+    padding: 16px 0 48px;
     gap: 32px;
   }
 
@@ -1181,7 +1183,7 @@ footer {
   .footer-grid {
     grid-template-columns: 1fr;
     gap: 28px;
-    padding: 36px 0 28px;
+    padding: 48px 0 28px;
   }
 
   .footer-bottom {
