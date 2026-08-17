@@ -19,8 +19,8 @@ export default function SiteHeader() {
       <div className="container site-header">
         <Link href="/" className="brand">
           <span className="path">~/</span>
-          <span className="tilde">rst-</span>
-          crew
+          <span className="tilde">RST-</span>
+          CREW
           <span className="cursor" aria-hidden="true" />
         </Link>
         <div className="header-right">

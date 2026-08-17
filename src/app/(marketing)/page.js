@@ -4,11 +4,35 @@ export const metadata = {
   title: "Home",
 };
 
+const disciplines = [
+  {
+    title: "Development",
+    owner: "Rethy",
+    desc: "Fast, clean web applications built with Next.js, React, and modern tooling.",
+    href: "/projects/portfolio-platform",
+    icon: "</>",
+  },
+  {
+    title: "Media",
+    owner: "Solech",
+    desc: "Motion graphics, kinetic type, and short-form video crafted for digital platforms.",
+    href: "/projects/motion-reel",
+    icon: "▶",
+  },
+  {
+    title: "Photography",
+    owner: "Tree",
+    desc: "Portraits and events captured through light, expression, and real moments.",
+    href: "/projects/portrait-series",
+    icon: "◻",
+  },
+];
+
 export default function HomePage() {
   return (
     <section className="hero">
       <div>
-        <p className="eyebrow">ruth-solech-tree / crew</p>
+        <p className="eyebrow">rethy-solech-tree / crew</p>
         <h1 className="hero-title">
           We build for the <span className="accent-line">open web.</span>
         </h1>
@@ -67,6 +91,21 @@ export default function HomePage() {
             <span className="prompt">❯</span> <span className="terminal-cursor" aria-hidden="true" />
           </div>
         </div>
+      </div>
+
+      {/* Disciplines */}
+      <div className="discipline-grid">
+        {disciplines.map((d) => (
+          <Link key={d.title} href={d.href} className="discipline-card">
+            <span className="discipline-icon" aria-hidden="true">
+              {d.icon}
+            </span>
+            <span className="discipline-title">{d.title}</span>
+            <span className="discipline-owner">by {d.owner}</span>
+            <span className="discipline-desc">{d.desc}</span>
+            <span className="discipline-link">view work ↗</span>
+          </Link>
+        ))}
       </div>
     </section>
   );

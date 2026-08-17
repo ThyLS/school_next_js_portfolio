@@ -12,6 +12,8 @@ const langColors = {
   CSS: "#563d7c",
   Python: "#3572a5",
   Go: "#00add8",
+  "After Effects": "#9999ff",
+  Lightroom: "#31a8ff",
 };
 
 export default function ProjectsPage() {
@@ -29,16 +31,14 @@ export default function ProjectsPage() {
       <div className="grid">
         {projects.map((p) => {
           const langColor = langColors[p.language] ?? "#8b949e";
-          return (
-            <Link
-              key={p.id}
-              className="repo-card"
-              href={p.href}
-              target={p.href.startsWith("http") ? "_blank" : undefined}
-              rel={p.href.startsWith("http") ? "noopener noreferrer" : undefined}
-            >
+          const isPlaceholder = p.placeholder === true || p.href === "#";
+          const cardInner = (
+            <>
               <div className="repo-path">
                 <span className="branch">⎇</span> {p.path}
+                {isPlaceholder && (
+                  <span className="wip-tag">wip</span>
+                )}
               </div>
               <h3>{p.title}</h3>
               <div className="repo-desc">{p.description}</div>
@@ -56,6 +56,16 @@ export default function ProjectsPage() {
                   ↗
                 </span>
               </div>
+            </>
+          );
+
+          return (
+            <Link
+              key={p.id}
+              className="repo-card"
+              href={`/projects/${p.slug}`}
+            >
+              {cardInner}
             </Link>
           );
         })}
