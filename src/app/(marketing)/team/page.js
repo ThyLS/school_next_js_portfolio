@@ -6,24 +6,27 @@ export const metadata = {
 
 const team = [
   {
-    name: "Rethy",
+    name: "Sounrethy Loeng",
+    shortName: "Rethy",
     role: "Developer",
     bio: "Builds fast, clean web applications with React, Next.js, and modern tooling.",
-    initials: "RT",
+    initials: "SL",
     photo: "/team/rethy.png",
   },
   {
-    name: "Solech",
+    name: "Solech Lang",
+    shortName: "Solech",
     role: "Media",
     bio: "Crafts engaging media content and motion graphics for digital platforms.",
     initials: "SL",
     photo: "/team/solech.png",
   },
   {
-    name: "Tree",
+    name: "Tongtree Tay",
+    shortName: "Tree",
     role: "Photographer",
     bio: "Captures stories through photography — portraits, events, and visual storytelling.",
-    initials: "TR",
+    initials: "TT",
     photo: "/team/tree.png",
   },
 ];
